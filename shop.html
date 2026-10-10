@@ -1,0 +1,503 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop | Archive Coffee</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+    <script defer src="js/index.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.26/dist/lenis.css">
+    <link rel="icon" type="image/svg" href="media/favicon.svg">
+    <script src="https://unpkg.com/lenis@1.3.26/dist/lenis.min.js"></script>
+    <script>
+        new Lenis({ autoRaf: true, autoToggle: true, anchors: true, allowNestedScroll: true, naiveDimensions: true, stopInertiaOnNavigate: true });
+    </script>
+
+    <!-- Primary Meta Tags -->
+    <title>Archive Coffee — The most delicious taste</title>
+    <meta name="title" content="Archive Coffee — The most delicious taste">
+    <meta name="description" content="Descubre nuestra tienda online de café y disfruta de granos seleccionados, aromas únicos y sabores excepcionales. Tu café favorito, a un clic de distancia.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://metatags.io/">
+    <meta property="og:title" content="Archive Coffee — The most delicious taste">
+    <meta property="og:description" content="Descubre nuestra tienda online de café y disfruta de granos seleccionados, aromas únicos y sabores excepcionales. Tu café favorito, a un clic de distancia.">
+    <meta property="og:image" content="https://metatags.io/images/meta-tags.png">
+
+    <!-- X (Twitter) -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://metatags.io/">
+    <meta property="twitter:title" content="Archive Coffee — The most delicious taste">
+    <meta property="twitter:description" content="Descubre nuestra tienda online de café y disfruta de granos seleccionados, aromas únicos y sabores excepcionales. Tu café favorito, a un clic de distancia.">
+    <meta property="twitter:image" content="https://metatags.io/images/meta-tags.png">
+    <!-- Meta Tags Generated with https://metatags.io -->
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="logo">ARCHIVE COFFEE</a>
+        <nav class="no-mobile" aria-label="Navegación principal">
+            <ul class="options">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="shop.html" class="active">SHOP</a></li>
+                <li><a href="subscriptions.html">SUBSCRIPTIONS</a></li>
+                <li><a href="#">LOCATIONS</a></li>
+                <li><a href="#">ABOUT</a></li>
+            </ul>
+        </nav>
+        <a href="checkout.html" class="boton">ORDER NOW</a>
+        <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <main class="shop-page">
+        <section class="recommendations" aria-label="Recommended products">
+            <div class="recommendations__header">
+                <div class="recommendations__heading">
+                    <span class="recommendations__label">CURATED SELECTION</span>
+                    <h1 class="recommendations__title">OUR RECOMMENDATIONS</h1>
+                </div>
+                <p class="recommendations__description">Selected products from the Archive collection,chosen for their character, precision and craft.</p>
+            </div>
+            <div class="recommendations__carousel">
+                <button type="button" class="recommendations__arrow recommendations__arrow--prev" aria-label="Previous recommendation">←</button>
+                <div class="recommendations__viewport">
+                    <div class="recommendations__track">
+                        <section class="recommendation-card is-active">
+                            <div class="recommendation-card__image">
+                                <span class="recommendation-card__tag">ETHIOPIA</span>
+                                <picture>
+                                    <source srcset="media/carrouselfotouna.webp" type="image/webp">
+                                    <img src="media/carrouselfotouna.jpg" alt="Quill Sidamo Highland coffee">
+                                </picture>
+                            </div>
+                            <div class="recommendation-card__content">
+                                <div class="recommendation-card__meta">
+                                    <span>COFFEE</span>
+                                    <span>$24.00</span>
+                                </div>
+                                <h2 class="recommendation-card__name">Quill Sidamo Highland</h2>
+                                <p class="recommendation-card__notes">Peach Blossom · Bergamot · Honey</p>
+                                <p class="recommendation-card__description">
+                                    A bright Ethiopian selection with floral
+                                    character and a clean, honeyed finish.
+                                </p>
+                                <a href="checkout.html" class="recommendation-card__button">SHOP NOW</a>
+                            </div>
+                        </section>
+
+                        <section class="recommendation-card">
+                            <div class="recommendation-card__image">
+                                <span class="recommendation-card__tag">COLOMBIA / HUILA</span>
+                                <picture>
+                                    <source srcset="media/carrouselfotodos.webp" type="image/webp">
+                                    <img src="media/carrouselfotodos.jpg" alt="Huila Reserve Dark coffee">
+                                </picture>
+                            </div>
+                            <div class="recommendation-card__content">
+                                <div class="recommendation-card__meta">
+                                    <span>COFFEE</span>
+                                    <span>$22.00</span>
+                                </div>
+                                <h2 class="recommendation-card__name">Huila Reserve Dark</h2>
+                                <p class="recommendation-card__notes">Dark Chocolate · Molasses · Roasted Almond</p>
+                                <p class="recommendation-card__description">
+                                    A structured Colombian roast with deep
+                                    chocolate notes and a rich finish.
+                                </p>
+                                <a href="checkout.html" class="recommendation-card__button">SHOP NOW</a>
+                            </div>
+                        </section>
+
+                        <section class="recommendation-card">
+                            <div class="recommendation-card__image">
+                                <span class="recommendation-card__tag">BREWING GEAR</span>
+                                <picture>
+                                    <source srcset="media/carrouselfototres.webp" type="image/webp">
+                                    <img src="media/carrouselfototres.jpg" alt="Hario V60 Ceramic Onyx">
+                                </picture>
+                            </div>
+                            <div class="recommendation-card__content">
+                                <div class="recommendation-card__meta">
+                                    <span>BREWING</span>
+                                    <span>$28.00</span>
+                                </div>
+                                <h2 class="recommendation-card__name">Hario V60 Ceramic - Onyx</h2>
+                                <p class="recommendation-card__notes">Spiral Ribbing · Ceramic · Pour Over</p>
+                                <p class="recommendation-card__description">Precise extraction with spiral ribbing designed for controlled pour-over brewing.</p>
+                                <a href="checkout.html" class="recommendation-card__button">SHOP NOW</a>
+                            </div>
+                        </section>
+
+                        <section class="recommendation-card">
+                            <div class="recommendation-card__image">
+                                <span class="recommendation-card__tag">PRECISION TOOLS</span>
+                                <picture>
+                                    <source srcset="media/carrouselfotocuatro.webp" type="image/webp">
+                                    <img src="media/carrouselfotocuatro.jpg" alt="Archive Scale 1.2">
+                                </picture>
+                            </div>
+                            <div class="recommendation-card__content">
+                                <div class="recommendation-card__meta">
+                                    <span>EQUIPMENT</span>
+                                    <span>$145.00</span>
+                                </div>
+                                <h2 class="recommendation-card__name">Archive Scale 1.2</h2>
+                                <p class="recommendation-card__notes">0.1g Accuracy · Flow Rate · Timer</p>
+                                <p class="recommendation-card__description">
+                                    Precision weighing with an integrated
+                                    flow-rate timer for repeatable brewing.
+                                </p>
+                                <a href="checkout.html" class="recommendation-card__button">SHOP NOW</a>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+                <button type="button" class="recommendations__arrow recommendations__arrow--next" aria-label="Next recommendation">→</button>
+            </div>
+
+            <div class="recommendations__controls">
+                <button type="button" class="recommendations__dot is-active" aria-label="Go to recommendation 1" aria-current="true"></button>
+                <button type="button" class="recommendations__dot" aria-label="Go to recommendation 2" aria-current="false"></button>
+                <button type="button" class="recommendations__dot" aria-label="Go to recommendation 3" aria-current="false"></button>
+                <button type="button" class="recommendations__dot" aria-label="Go to recommendation 4" aria-current="false"></button>
+            </div>
+        </section>
+
+        <section class="shop-intro">
+            <div class="shop-intro__content">
+                <h1 class="shop-intro__title">INVENTORY CONTROL</h1>
+                <p class="shop-intro__description">
+                    Precision-selected origins and architecturally engineered brewing tools for
+                    the discerning coffee craftsperson.
+                </p>
+            </div>
+        </section>
+
+        <section class="inventory">
+            <div class="inventory__layout">
+                <aside class="inventory__sidebar">
+                    <form class="inventory-filters">
+                        <fieldset class="filter-group">
+                            <legend>ROAST LEVEL</legend>
+                            <label class="filter-option">
+                                <input type="checkbox" name="roast" value="light">
+                                <span>LIGHT (BRIGHT)</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="roast" value="medium">
+                                <span>MEDIUM (BALANCED)</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="roast" value="dark">
+                                <span>DARK (STRUCTURED)</span>
+                            </label>
+                        </fieldset>
+
+                        <fieldset class="filter-group">
+                            <legend>REGION</legend>
+                            <label class="filter-option">
+                                <input type="checkbox" name="region" value="ethiopia">
+                                <span>ETHIOPIA</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="region" value="colombia">
+                                <span>COLOMBIA</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="region" value="kenya">
+                                <span>KENYA</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="region" value="indonesia">
+                                <span>INDONESIA</span>
+                            </label>
+                        </fieldset>
+                    </form>
+
+                    <section class="inventory-subscription">
+                        <span class="inventory-subscription__label">CURATED PICKS</span>
+                        <h2 class="inventory-subscription__title">ARCHIVE SUBSCRIPTION</h2>
+                        <p class="inventory-subscription__description">
+                            Rotating seasonal selections delivered to your studio monthly.
+                        </p>
+                        <a href="subscriptions.html" class="inventory-subscription__button">ENROLL NOW</a>
+                    </article>
+                </aside>
+
+                <div class="inventory__products">
+                    <section class="product-card" data-roast="light" data-region="ethiopia">
+                        <div class="product-card__image">
+                            <span class="product-card__tag">ETHIOPIA</span>
+                            <picture>
+                                <source srcset="media/cafeimagenuno.webp" type="image/webp">
+                                <img src="media/cafeimagenuno.jpg" alt="Quill Sidamo Highland coffee">
+                            </picture>
+                        </div>
+                        <div class="product-card__content">
+                            <span class="product-card__price">$24.00</span>
+                            <h2 class="product-card__name">Quill Sidamo Highland</h2>
+                            <p class="product-card__description">Peach Blossom, Bergamot, Honey</p>
+                        </div>
+                    </section>
+
+                    <section class="product-card" data-category="equipment">
+                        <div class="product-card__image">
+                            <span class="product-card__tag">BREWING GEAR</span>
+                            <picture>
+                                <source srcset="media/harioimagen.webp" type="image/webp">
+                                <img src="media/harioimagen.jpg" alt="Hario V60 Ceramic Onyx">
+                            </picture>
+                        </div>
+                        <div class="product-card__content">
+                            <span class="product-card__price">$28.00</span>
+                            <h2 class="product-card__name">Hario V60 Ceramic - Onyx</h2>
+                            <p class="product-card__description">Precise extraction with spiral ribbing.</p>
+                        </div>
+                    </section>
+
+                    <section class="product-card" data-category="equipment">
+                        <div class="product-card__image">
+                            <span class="product-card__tag">PRECISION TOOLS</span>
+                            <picture>
+                                <source srcset="media/Archiscale.webp" type="image/webp">
+                                <img src="media/Archiscale.jpg" alt="Archive Scale 1.2">
+                            </picture>
+                        </div>
+                        <div class="product-card__content">
+                            <span class="product-card__price">$145.00</span>
+                            <h2 class="product-card__name">Archive Scale 1.2</h2>
+                            <p class="product-card__description">0.1g accuracy with integrated flow-rate timer.</p>
+                        </div>
+                    </section>
+
+                    <section class="product-card" data-roast="dark" data-region="colombia">
+                        <div class="product-card__image">
+                            <span class="product-card__tag">COLOMBIA / HUILA</span>
+                            <picture>
+                                <source srcset="media/cafecoluno.webp" type="image/webp">
+                                <img src="media/cafecoluno.jpg" alt="Huila Reserve Dark coffee">
+                            </picture>
+                        </div>
+                        <div class="product-card__content">
+                            <span class="product-card__price">$22.00</span>
+                            <h2 class="product-card__name">Huila Reserve Dark</h2>
+                            <p class="product-card__description">Dark Chocolate, Molasses, Roasted Almond</p>
+                        </div>
+                    </section>
+
+                    <section class="product-card" data-category="equipment">
+                        <div class="product-card__image">
+                            <span class="product-card__tag">EQUIPMENT</span>
+                            <picture>
+                                <source srcset="media/imagenkettle.webp" type="image/webp">
+                                <img src="media/imagenkettle.jpg" alt="Gooseneck Flow Kettle">
+                            </picture>
+                        </div>
+                        <div class="product-card__content">
+                            <span class="product-card__price">$185.00</span>
+                            <h2 class="product-card__name">Gooseneck Flow Kettle</h2>
+                            <p class="product-card__description">Precise temperature control for pour-over excellence.</p>
+                        </div>
+                    </section>
+
+                    <section class="product-card" data-category="glassware">
+                        <div class="product-card__image">
+                            <span class="product-card__tag">GLASSWARE</span>
+                            <picture>
+                                <source srcset="media/archiglass.webp" type="image/webp">
+                                <img src="media/archiglass.jpg" alt="Archive Glass Tumbler Set">
+                            </picture>
+                        </div>
+                        <div class="product-card__content">
+                            <span class="product-card__price">$34.00</span>
+                            <h2 class="product-card__name">Archive Glass Tumbler Set</h2>
+                            <p class="product-card__description">Double-walled isolation for thermal stability.</p>
+                        </div>
+                    </section>
+
+                    <section class="product-card" data-roast="medium" data-region="kenya">
+                        <div class="product-card__image">
+                            <span class="product-card__tag">KENYA</span>
+                            <picture>
+                                <source srcset="media/cafekenyauno.webp" type="image/webp">
+                                <img src="media/cafekenyauno.jpg" alt="Kenya Highlands coffee">
+                            </picture>
+                        </div>
+                        <div class="product-card__content">
+                            <span class="product-card__price">$26.00</span>
+                            <h2 class="product-card__name">Kenya Highlands</h2>
+                            <p class="product-card__description">Blackcurrant, lime and a clean balanced finish.</p>
+                        </div>
+                    </section>
+
+                    <section class="product-card" data-roast="dark" data-region="indonesia">
+                        <div class="product-card__image">
+                            <span class="product-card__tag">INDONESIA</span>
+                            <picture>
+                                <source srcset="media/cafeindonesiauno.webp" type="image/webp">
+                                <img src="media/cafeindonesiauno.jpg" alt="Sumatra Estate coffee">
+                            </picture>
+                        </div>
+                        <div class="product-card__content">
+                            <span class="product-card__price">$23.00</span>
+                            <h2 class="product-card__name">Sumatra Estate</h2>
+                            <p class="product-card__description">Dark chocolate, spice and a deep earthy finish.</p>
+                        </div>
+                    </section>
+
+                    <section class="product-card" data-roast="dark" data-region="kenya">
+                        <div class="product-card__image">
+                            <span class="product-card__tag">KENYA</span>
+                            <picture>
+                                <source srcset="media/cafekenyados.webp" type="image/webp">
+                                <img src="media/cafekenyados.jpg" alt="Kenya Dark Estate coffee">
+                            </picture>
+                        </div>
+                        <div class="product-card__content">
+                            <span class="product-card__price">$27.00</span>
+                            <h2 class="product-card__name">Kenya Dark Estate</h2>
+                            <p class="product-card__description">Cacao, black cherry and roasted sugar with a full body.</p>
+                        </div>
+                    </section>
+
+                    <section class="product-card" data-roast="medium" data-region="ethiopia">
+                        <div class="product-card__image">
+                            <span class="product-card__tag">ETHIOPIA</span>
+                            <picture>
+                                <source srcset="media/cafeeti.webp" type="image/webp">
+                                <img src="media/cafeeti.jpg" alt="Ethiopia Natural coffee">
+                            </picture>
+                        </div>
+                        <div class="product-card__content">
+                            <span class="product-card__price">$27.00</span>
+                            <h2 class="product-card__name">Ethiopia Natural</h2>
+                            <p class="product-card__description">Ripe fruit, cocoa and floral sweetness with a soft finish.</p>
+                        </div>
+                    </section>
+
+                    <section class="product-card" data-roast="medium" data-region="colombia">
+                        <div class="product-card__image">
+                            <span class="product-card__tag">COLOMBIA</span>
+                            <picture>
+                                <source srcset="media/cafecoltres.webp" type="image/webp">
+                                <img src="media/cafecoltres.jpg" alt="Colombia El Dorado coffee">
+                            </picture>
+                        </div>
+                        <div class="product-card__content">
+                            <span class="product-card__price">$25.00</span>
+                            <h2 class="product-card__name">Colombia El Dorado</h2>
+                            <p class="product-card__description">Caramel, red apple and toasted almond with a silky body.</p>
+                        </div>
+                    </section>
+
+                    <section class="product-card" data-roast="light" data-region="kenya">
+                        <div class="product-card__image">
+                            <span class="product-card__tag">KENYA</span>
+                            <picture>
+                                <source srcset="media/cafekenyacuatro.webp" type="image/webp">
+                                <img src="media/cafekenyacuatro.jpg" alt="Kenya Kirinyaga coffee">
+                            </picture>
+                        </div>
+                        <div class="product-card__content">
+                            <span class="product-card__price">$29.00</span>
+                            <h2 class="product-card__name">Kenya Kirinyaga</h2>
+                            <p class="product-card__description">Red berries, citrus peel and floral acidity with a bright finish.</p>
+                        </div>
+                    </section>
+
+                    <section class="product-card" data-roast="light" data-region="colombia">
+                        <div class="product-card__image">
+                            <span class="product-card__tag">COLOMBIA</span>
+                            <picture>
+                                <source srcset="media/cafecolultimo.webp" type="image/webp">
+                                <img src="media/cafecolultimo.jpg" alt="Colombia Sierra Light coffee">
+                            </picture>
+                        </div>
+                        <div class="product-card__content">
+                            <span class="product-card__price">$24.00</span>
+                            <h2 class="product-card__name">Colombia Sierra Light</h2>
+                            <p class="product-card__description">Citrus, honey and stone fruit with a delicate clean finish.</p>
+                        </div>
+                    </section>
+
+                    <div class="inventory__more">
+                        <button type="button" class="inventory__more-button">SHOW MORE INVENTORY</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__content">
+            <div class="footer__main">
+                <div class="footer__brand">
+                    <a href="index.html" class="footer__logo">ARCHIVE COFFEE</a>
+                    <p class="footer__description">Building the architecture of superior coffee since 2024.Precision-focused, quality-driven.</p>
+                    <div class="footer__social">
+                        <a href="#" aria-label="Instagram" class="footer__social-link"><i class="ri-instagram-line"></i></a>
+                        <a href="#" aria-label="Email" class="footer__social-link"><i class="ri-mail-line"></i></a>
+                        <a href="#" aria-label="X" class="footer__social-link"><i class="ri-global-line"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer__column">
+                    <h2 class="footer__heading">COMPANY</h2>
+                    <ul class="footer__links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Wholesale</a></li>
+                        <li><a href="#">Journal</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__column">
+                    <h2 class="footer__heading">SUPPORT</h2>
+                    <ul class="footer__links">
+                        <li><a href="#">Shipping &amp; Returns</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__column footer__contact">
+                    <h2 class="footer__heading">CONTACT</h2>
+                    <address class="footer__contact-info">
+                        <p>124 Architectural Way</p>
+                        <p>Portland, OR 97201</p>
+                        <a href="tel:+15035550194">+1 (503) 555-0194</a>
+                        <a href="mailto:studio@archivecoffee.com">studio@archivecoffee.com</a>
+                    </address>
+                </div>
+
+                <div class="footer__newsletter">
+                    <h2 class="footer__heading">BLUEPRINT UPDATES</h2>
+                    <form class="footer__form" action="#" method="post">
+                        <label for="newsletter-email" class="sr-only">Email address</label>
+                        <input id="newsletter-email" class="footer__input" type="email" name="email" placeholder="Email address" autocomplete="email" required>
+                        <button type="submit" class="footer__submit">JOIN</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2024 ARCHIVE COFFEE. ALL RIGHTS RESERVED.</p>
+                <div class="footer__meta">
+                    <span>DESIGN BY ARCHIVE STUDIO</span>
+                    <span>HQ: SEATTLE, WA</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
