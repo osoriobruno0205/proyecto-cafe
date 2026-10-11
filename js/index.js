@@ -159,20 +159,28 @@ if (inventory) {
 
 // TRANSICIONES DE SCROLL
 
-const elementos = document.querySelectorAll('.transicionScroll');
+document.addEventListener('DOMContentLoaded', () => {
+    const elementos = document.querySelectorAll('.transicionScroll');
 
-const observador = new IntersectionObserver((entradas) => {
-    entradas.forEach((entrada) => {
-        if (entrada.isIntersecting) {
-            entrada.target.classList.add('visible');
-        } else {
-            entrada.target.classList.remove('visible');
-        }
-    });
-}, {
-    threshold: 0.15
-});
+    if ('IntersectionObserver' in window) {
+        const observador = new IntersectionObserver((entradas, observador) => {
+            entradas.forEach((entrada) => {
+                if (entrada.isIntersecting) {
+                    entrada.target.classList.add('visible');
+                    observador.unobserve(entrada.target);
+                }
+            });
+        }, {
+            threshold: 0.05,
+            rootMargin: '0px 0px 100px 0px'
+        });
 
-elementos.forEach((elemento) => {
-    observador.observe(elemento);
+        elementos.forEach((elemento) => {
+            observador.observe(elemento);
+        });
+    } else {
+        elementos.forEach((elemento) => {
+            elemento.classList.add('visible');
+        });
+    }
 });

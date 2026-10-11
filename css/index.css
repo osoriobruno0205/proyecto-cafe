@@ -96,13 +96,21 @@
     
 .transicionScroll {
     opacity: 0;
-    transform: translateY(60px);
+    transform: translateY(25px);
     transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
 .transicionScroll.visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .transicionScroll {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
 }
 
 }
