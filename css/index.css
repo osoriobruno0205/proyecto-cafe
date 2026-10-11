@@ -90,7 +90,9 @@
     --transition-fast: .2s ease;
     --transition-image: .35s ease;
 
+
 }
+
 
 
 
@@ -3497,3 +3499,542 @@ h4,
 }
 
 
+
+/* ==========================================================
+   RESPONSIVE PATCH — ARCHIVE COFFEE HOME
+   Se añade al final del CSS existente para corregir los
+   desbordamientos móviles y mejorar el uso de pantallas grandes.
+========================================================== */
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: clip;
+}
+
+body {
+    min-width: 320px;
+}
+
+img,
+video {
+    max-width: 100%;
+}
+
+/* Escritorios grandes: ampliar el área útil sin estirar el texto */
+@media (min-width: 1201px) {
+    .framework__header,
+    .framework__process,
+    .framework__efficiency,
+    .footer__content,
+    .footer__bottom {
+        max-width: 82rem;
+    }
+
+    .hero__content {
+        width: min(100% - 6rem, 82rem);
+        padding-inline: 0;
+    }
+
+    .framework__header,
+    .framework__process,
+    .framework__efficiency {
+        padding-inline: clamp(2rem, 4vw, 4rem);
+    }
+
+    .framework__process {
+        gap: clamp(1.5rem, 2.5vw, 3rem);
+    }
+
+    .framework__efficiency {
+        grid-template-columns: minmax(0, 1fr) minmax(22rem, .85fr);
+        gap: clamp(2.5rem, 4vw, 5rem);
+    }
+
+    .footer__main {
+        gap: clamp(2rem, 3vw, 4rem);
+    }
+}
+
+/* Tablet horizontal / portátil pequeño */
+@media (max-width: 64rem) {
+    .header {
+        gap: 1rem;
+    }
+
+    .options {
+        gap: clamp(.65rem, 1.5vw, 1rem);
+    }
+
+    .framework__header {
+        align-items: flex-start;
+        gap: 1.5rem;
+    }
+
+    .framework__technical-link {
+        white-space: normal;
+        text-align: right;
+    }
+
+    .framework__efficiency {
+        grid-template-columns: minmax(0, 1fr) minmax(16rem, .85fr);
+    }
+}
+
+/* Tablets y dispositivos donde la navegación de escritorio ya no cabe */
+@media (max-width: 48rem) {
+    .header {
+        min-height: 4rem;
+        padding: .75rem 1.25rem;
+        gap: .75rem;
+    }
+
+    .header .no-mobile {
+        display: none;
+    }
+
+    .header .boton {
+        display: none;
+    }
+
+    .header .menu-toggle {
+        display: flex;
+        margin-left: auto;
+    }
+
+    /* El menú desplegable no depende de que el header esté scrolled */
+    .header.menu-open .no-mobile {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 1001;
+        display: flex;
+        width: 100%;
+        padding: 1.5rem 1.25rem;
+        background-color: rgba(31, 31, 31, .97);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+    }
+
+    .header.menu-open .options {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.25rem;
+    }
+
+    .header.menu-open .options a {
+        font-size: .75rem;
+    }
+
+    .hero {
+        min-height: clamp(34rem, 75svh, 42rem);
+    }
+
+    .hero__content {
+        width: 100%;
+        padding: 5rem 1.5rem 4rem;
+    }
+
+    .title-xxl {
+        max-width: 38rem;
+        font-size: clamp(2.4rem, 7vw, 3.5rem);
+        overflow-wrap: normal;
+    }
+
+    .framework__header {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.25rem;
+        padding: 3.5rem 1.5rem 2rem;
+    }
+
+    .framework__technical-link {
+        text-align: left;
+    }
+
+    .framework__process {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        padding: 0 1.5rem 3.5rem;
+        gap: 2rem 1.25rem;
+    }
+
+    .framework-card--second,
+    .framework-card--third {
+        margin-top: 0;
+    }
+
+    .framework-card--third {
+        grid-column: 1 / -1;
+        width: min(100%, 32rem);
+    }
+
+    .framework-card--third .framework-card__image {
+        aspect-ratio: 1.5 / 1;
+    }
+
+    .framework__efficiency {
+        grid-template-columns: minmax(0, 1fr);
+        padding: 3rem 1.5rem 4rem;
+        gap: 1.5rem;
+    }
+
+    .efficiency__content {
+        min-width: 0;
+        padding: 1.5rem 0;
+    }
+
+    .efficiency__background-title {
+        max-width: 100%;
+        font-size: clamp(4rem, 13vw, 7rem);
+        white-space: normal;
+        overflow-wrap: anywhere;
+    }
+
+    .efficiency__stats {
+        gap: 1.5rem 2rem;
+    }
+
+    .efficiency__image {
+        height: auto;
+        aspect-ratio: 1.4 / 1;
+    }
+
+    .footer {
+        padding: 3rem 1.5rem 1.25rem;
+    }
+
+    .footer__main {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 2rem 1.5rem;
+    }
+
+    .footer__brand,
+    .footer__newsletter {
+        grid-column: 1 / -1;
+    }
+
+    .footer__newsletter {
+        width: 100%;
+        max-width: 30rem;
+    }
+
+    .footer__bottom {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: .75rem;
+    }
+
+    .footer__meta {
+        flex-wrap: wrap;
+        gap: .5rem 1rem;
+    }
+}
+
+/* Móviles */
+@media (max-width: 40rem) {
+    .header {
+        min-height: 3.75rem;
+        padding: .625rem 1rem;
+    }
+
+    .logo {
+        font-size: .75rem;
+    }
+
+    .header.scrolled .logo {
+        position: static;
+        left: auto;
+        transform: none;
+    }
+
+    .header.scrolled .menu-toggle {
+        display: flex;
+    }
+
+    .hero {
+        min-height: auto;
+        min-height: 100svh;
+        min-height: clamp(36rem, 88svh, 48rem);
+    }
+
+    .hero__image {
+        object-position: 62% center;
+    }
+
+    .hero::after {
+        background: linear-gradient(
+            90deg,
+            rgba(31, 31, 31, .82) 0%,
+            rgba(31, 31, 31, .64) 58%,
+            rgba(31, 31, 31, .38) 100%
+        );
+    }
+
+    .hero__content {
+        min-height: inherit;
+        justify-content: center;
+        padding: 4rem 1.25rem 3rem;
+    }
+
+    .hero__label {
+        margin-bottom: .875rem;
+        font-size: .625rem;
+        letter-spacing: .1em;
+    }
+
+    .title-xxl {
+        max-width: 100%;
+        font-size: clamp(2.15rem, 9.4vw, 3.1rem);
+        line-height: 1.02;
+        letter-spacing: -.045em;
+        overflow-wrap: break-word;
+    }
+
+    .hero__description {
+        max-width: 34rem;
+        margin-top: 1.125rem;
+        font-size: .875rem;
+        line-height: 1.65;
+    }
+
+    .hero__buttons {
+        width: 100%;
+        margin-top: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: .75rem;
+    }
+
+    .hero .btn {
+        width: fit-content;
+        max-width: 100%;
+        min-height: 2.75rem;
+        padding: .8rem 1rem;
+        font-size: .6875rem;
+        line-height: 1.3;
+        white-space: normal;
+    }
+
+    .framework__header {
+        padding: 3rem 1.25rem 1.75rem;
+    }
+
+    .framework__eyebrow {
+        font-size: .6875rem;
+    }
+
+    .framework__intro {
+        font-size: .875rem;
+        line-height: 1.7;
+    }
+
+    .framework__technical-link {
+        max-width: 100%;
+        font-size: .6875rem;
+        line-height: 1.5;
+    }
+
+    .framework__process {
+        grid-template-columns: minmax(0, 1fr);
+        padding: 0 1.25rem 3rem;
+        gap: 2.5rem;
+    }
+
+    .framework-card,
+    .framework-card--third {
+        grid-column: auto;
+        width: 100%;
+        min-width: 0;
+    }
+
+    .framework-card--second,
+    .framework-card--third {
+        margin-top: 0;
+    }
+
+    .framework-card__image,
+    .framework-card--second .framework-card__image,
+    .framework-card--third .framework-card__image {
+        width: 100%;
+        aspect-ratio: 1.35 / 1;
+    }
+
+    .framework-card__content {
+        padding-top: .875rem;
+    }
+
+    .framework-card h2 {
+        font-size: clamp(1.125rem, 5vw, 1.35rem);
+        line-height: 1.25;
+    }
+
+    .framework-card p {
+        font-size: .8125rem;
+        line-height: 1.65;
+    }
+
+    .framework__efficiency {
+        width: 100%;
+        grid-template-columns: minmax(0, 1fr);
+        padding: 2.75rem 1.25rem 3.5rem;
+        gap: 1.5rem;
+    }
+
+    .efficiency__content {
+        padding: 1.25rem 0;
+    }
+
+    .efficiency__background-title {
+        top: 1.25rem;
+        left: 0;
+        transform: none;
+        width: 100%;
+        font-size: clamp(3.25rem, 15vw, 5.5rem);
+        line-height: .85;
+        white-space: normal;
+        overflow-wrap: anywhere;
+    }
+
+    .efficiency__eyebrow {
+        font-size: .625rem;
+    }
+
+    .efficiency__text {
+        font-size: .85rem;
+        line-height: 1.7;
+    }
+
+    .efficiency__stats {
+        margin-top: 1.5rem;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.25rem;
+    }
+
+    .efficiency__stat strong {
+        font-size: 1.375rem;
+    }
+
+    .efficiency__stat span {
+        font-size: .5625rem;
+        line-height: 1.5;
+    }
+
+    .efficiency__image {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 4 / 3;
+    }
+
+    .footer {
+        padding: 2.75rem 1.25rem 1.25rem;
+    }
+
+    .footer__main {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.75rem 1rem;
+    }
+
+    .footer__brand,
+    .footer__newsletter {
+        grid-column: 1 / -1;
+    }
+
+    .footer__description {
+        font-size: .75rem;
+    }
+
+    .footer__heading {
+        font-size: .625rem;
+    }
+
+    .footer__links a,
+    .footer__newsletter p {
+        font-size: .6875rem;
+        line-height: 1.6;
+    }
+
+    .footer__form {
+        width: 100%;
+    }
+
+    .footer__input {
+        min-width: 0;
+        font-size: .75rem;
+    }
+
+    .footer__bottom {
+        margin-top: 2rem;
+        padding-top: 1rem;
+        gap: .75rem;
+    }
+
+    .footer__copyright,
+    .footer__meta {
+        font-size: .5625rem;
+    }
+
+    .footer__meta {
+        flex-direction: column;
+        gap: .375rem;
+    }
+}
+
+/* Móviles estrechos */
+@media (max-width: 25rem) {
+    .header {
+        padding-inline: .875rem;
+    }
+
+    .hero {
+        min-height: 38rem;
+    }
+
+    .hero__content {
+        padding-inline: 1rem;
+    }
+
+    .title-xxl {
+        font-size: clamp(2rem, 9vw, 2.3rem);
+    }
+
+    .hero__description {
+        font-size: .8125rem;
+    }
+
+    .hero .btn {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .framework__header,
+    .framework__process,
+    .framework__efficiency {
+        padding-inline: 1rem;
+    }
+
+    .framework__process {
+        gap: 2.25rem;
+    }
+
+    .efficiency__stats {
+        gap: 1rem;
+    }
+
+    .efficiency__background-title {
+        font-size: 14vw;
+    }
+
+    .footer {
+        padding-inline: 1rem;
+    }
+
+    .footer__main {
+        gap: 1.5rem .75rem;
+    }
+}
