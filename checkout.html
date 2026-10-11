@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Checkout | Archive Coffee</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,12 +12,14 @@
     <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.26/dist/lenis.css">
     <link rel="icon" type="image/svg" href="media/favicon.svg">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet">
+    <script defer src="js/index.js"></script>
     <script src="https://unpkg.com/lenis@1.3.26/dist/lenis.min.js"></script>
     <script>
         new Lenis({ autoRaf: true, autoToggle: true, anchors: true, allowNestedScroll: true, naiveDimensions: true, stopInertiaOnNavigate: true });
     </script>
 
     <!-- Primary Meta Tags -->
+    <title>Checkout | Archive Coffee</title>
     <meta name="title" content="Archive Coffee — The most delicious taste">
     <meta name="description" content="Descubre nuestra tienda online de café y disfruta de granos seleccionados, aromas únicos y sabores excepcionales. Tu café favorito, a un clic de distancia.">
 
@@ -27,7 +28,7 @@
     <meta property="og:url" content="https://metatags.io/">
     <meta property="og:title" content="Archive Coffee — The most delicious taste">
     <meta property="og:description" content="Descubre nuestra tienda online de café y disfruta de granos seleccionados, aromas únicos y sabores excepcionales. Tu café favorito, a un clic de distancia.">
-    <meta property="og:image" content="https://metatags.io/images/meta-tags.png">
+    <meta property="og:image" content="./media/logo.webp">
 
     <!-- X (Twitter) -->
     <meta property="twitter:card" content="summary_large_image">
@@ -55,17 +56,17 @@
         </header>
 
         <main class="checkout-main-page">
-            <section class="checkout-intro">
+            <section class="checkout-intro transicionScroll">
                 <div class="checkout-intro__heading">
                     <p class="checkout-intro__eyebrow">TERMINAL ID: ARC-992-X |AUTHORIZATION PENDING</p>
                     <h1 class="checkout-intro__title">TRANSACTION PROTOCOL</h1>
                 </div>
             </section>
 
-            <section class="checkout">
+            <section class="checkout transicionScroll">
                 <div class="checkout__layout">
                     <div class="checkout__main">
-                        <section class="checkout-card">
+                        <section class="checkout-card transicionScroll">
                             <div class="checkout-card__heading">
                                 <span class="checkout-card__number">01</span>
                                 <h2 class="checkout-card__title">LOGISTIC PARAMETERS</h2>
@@ -99,7 +100,7 @@
                             </div>
                         </section>
 
-                        <section class="checkout-card">
+                        <section class="checkout-card transicionScroll">
                             <div class="checkout-card__heading">
                                 <span class="checkout-card__number">02</span>
                                 <h2 class="checkout-card__title">TRANSIT LOGISTICS</h2>
@@ -128,7 +129,7 @@
                             </div>
                         </section>
 
-                        <section class="checkout-card">
+                        <section class="checkout-card transicionScroll">
                             <div class="checkout-card__heading">
                                 <span class="checkout-card__number">03</span>
                                 <h2 class="checkout-card__title">FINANCIAL VERIFICATION</h2>
@@ -156,13 +157,13 @@
                     </div>
 
                     <aside class="checkout__sidebar">
-                        <section class="summary-card">
+                        <section class="summary-card transicionScroll">
                             <h2 class="summary-card__title">MANIFEST SUMMARY</h2>
 
                             <div class="summary-card__products">
                                 <section class="summary-product">
                                     <div class="summary-product__image">
-                                        <img src="media/Background.webp" alt="Single origin Ethiopia coffee">
+                                        <img src="media/Background.webp" alt="Single origin Ethiopia coffee" loading="lazy">
                                     </div>
                                     <div class="summary-product__info">
                                         <h3>SINGLE ORIGIN: ETHIOPIA</h3>
@@ -174,7 +175,7 @@
 
                                 <section class="summary-product">
                                     <div class="summary-product__image">
-                                        <img src="media/Background (1).webp" alt="Precision coffee filters">
+                                        <img src="media/Background (1).webp" alt="Precision coffee filters" loading="lazy">
                                     </div>
                                     <div class="summary-product__info">
                                         <h3>PRECISION FILTERS (V60)</h3>
@@ -211,13 +212,11 @@
             </section>
         </main>
 
-        <footer class="footer">
+        <footer class="footer transicionScroll">
             <div class="footer__content">
                 <div class="footer__brand">
                     <a href="index.html" class="footer__logo">ARCHIVE COFFEE</a>
-                    <p class="footer__description">
-                        Dedicated to the preservation of origin and the architectural
-                        integrity of coffee roasting.
+                    <p class="footer__description">Dedicated to the preservation of origin and the architecturalintegrity of coffee roasting.
                     </p>
                 </div>
 

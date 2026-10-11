@@ -1,50 +1,56 @@
 // HEADER
 
-const header = document.querySelector(".header"); 
+const header = document.querySelector(".header");
 const menuToggle = document.querySelector(".menu-toggle");
 
+if (header && menuToggle) {
+    function handleScroll() {
+        const isScrolled = window.scrollY > 50;
 
-window.addEventListener("scroll", () => { 
-    if (window.scrollY > 50) { 
-        header.classList.add("scrolled"); 
-    } else { 
-        header.classList.remove("scrolled"); 
-        header.classList.remove("menu-open"); 
-        menuToggle.setAttribute("aria-expanded", "false"); 
-    } 
-    
-});
+        header.classList.toggle("scrolled", isScrolled);
 
-menuToggle.addEventListener("click", () => { 
-    const isOpen = header.classList.toggle("menu-open"); 
-    menuToggle.setAttribute("aria-expanded", isOpen); 
-});
+        if (!isScrolled) {
+            header.classList.remove("menu-open");
+            menuToggle.setAttribute("aria-expanded", "false");
+        }
+    }
+
+    function handleMenuToggle() {
+        const isOpen = header.classList.toggle("menu-open");
+
+        menuToggle.setAttribute("aria-expanded", String(isOpen));
+    }
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    menuToggle.addEventListener("click", handleMenuToggle);
+
+    handleScroll();
+}
 
 
-
-// CARROUSEL 
+// CAROUSEL
 
 const recommendations = document.querySelector(".recommendations");
 
 if (recommendations) {
-
     const track = recommendations.querySelector(".recommendations__track");
     const cards = recommendations.querySelectorAll(".recommendation-card");
-    const prevButton = recommendations.querySelector(".recommendations__arrow--prev");
-    const nextButton = recommendations.querySelector(".recommendations__arrow--next");
+    const prevButton = recommendations.querySelector(
+        ".recommendations__arrow--prev"
+    );
+    const nextButton = recommendations.querySelector(
+        ".recommendations__arrow--next"
+    );
     const dots = recommendations.querySelectorAll(".recommendations__dot");
 
     let currentIndex = 0;
 
     function showRecommendation(index) {
-
-        if (index < 0) {
-            currentIndex = cards.length - 1;
-        } else if (index >= cards.length) {
-            currentIndex = 0;
-        } else {
-            currentIndex = index;
+        if (!track || cards.length === 0) {
+            return;
         }
+
+        currentIndex = (index + cards.length) % cards.length;
 
         track.style.transform = `translateX(-${currentIndex * 100}%)`;
 
@@ -56,32 +62,37 @@ if (recommendations) {
         });
 
         dots.forEach((dot, dotIndex) => {
-
             const isActive = dotIndex === currentIndex;
 
             dot.classList.toggle("is-active", isActive);
-            dot.setAttribute(
-                "aria-current",
-                isActive ? "true" : "false"
-            );
-
+            dot.setAttribute("aria-current", String(isActive));
         });
     }
 
-    prevButton.addEventListener("click", () => {
+    function handlePrevClick() {
         showRecommendation(currentIndex - 1);
-    });
+    }
 
-    nextButton.addEventListener("click", () => {
+    function handleNextClick() {
         showRecommendation(currentIndex + 1);
-    });
+    }
+
+    function handleDotClick(index) {
+        showRecommendation(index);
+    }
+
+    if (prevButton) {
+        prevButton.addEventListener("click", handlePrevClick);
+    }
+
+    if (nextButton) {
+        nextButton.addEventListener("click", handleNextClick);
+    }
 
     dots.forEach((dot, index) => {
-
         dot.addEventListener("click", () => {
-            showRecommendation(index);
+            handleDotClick(index);
         });
-
     });
 
     showRecommendation(0);
@@ -93,79 +104,75 @@ if (recommendations) {
 const inventory = document.querySelector(".inventory");
 
 if (inventory) {
-
-    const filters = inventory.querySelectorAll(
-        '.inventory-filters input[type="checkbox"]'
+    const filters = Array.from(
+        inventory.querySelectorAll(
+            '.inventory-filters input[type="checkbox"]'
+        )
     );
 
     const products = inventory.querySelectorAll(".product-card");
 
-    filters.forEach(filter => {
+    function handleFilterChange() {
+        const selectedRoasts = filters
+            .filter(filter => filter.checked && filter.name === "roast")
+            .map(filter => filter.value);
 
-        filter.addEventListener("change", () => {
+        const selectedRegions = filters
+            .filter(filter => filter.checked && filter.name === "region")
+            .map(filter => filter.value);
 
-            const selectedRoasts = Array.from(
-                inventory.querySelectorAll(
-                    'input[name="roast"]:checked'
-                )
-            ).map(filter => filter.value);
+        products.forEach(product => {
+            const roast = product.dataset.roast;
+            const region = product.dataset.region;
 
-            const selectedRegions = Array.from(
-                inventory.querySelectorAll(
-                    'input[name="region"]:checked'
-                )
-            ).map(filter => filter.value);
-
-            products.forEach(product => {
-
-                const roast = product.dataset.roast;
-                const region = product.dataset.region;
-                const category = product.dataset.category;
-
-                let roastMatch = true;
-                let regionMatch = true;
-
-
-                if (selectedRoasts.length > 0) {
-
-                    roastMatch =
-                        roast &&
-                        selectedRoasts.includes(roast);
-                }
-
-                if (selectedRegions.length > 0) {
-
-                    regionMatch =
-                        region &&
-                        selectedRegions.includes(region);
-
-                }
-                const hasFilterData =
-                    product.dataset.roast ||
-                    product.dataset.region;
-
-                if (!hasFilterData) {
-
-                    product.style.display = 
-                        selectedRoasts.length === 0 &&
-                        selectedRegions.length === 0
-                            ? ""
-                            : "none";
-
-                    return;
-                }
-
+            // Oculta los productos que no tienen datos de café
+            // cuando hay algún filtro seleccionado.
+            if (!roast && !region) {
                 product.style.display =
-                    roastMatch && regionMatch
+                    selectedRoasts.length === 0 &&
+                    selectedRegions.length === 0
                         ? ""
                         : "none";
 
-            });
+                return;
+            }
 
+            const matchesRoast =
+                selectedRoasts.length === 0 ||
+                selectedRoasts.includes(roast);
+
+            const matchesRegion =
+                selectedRegions.length === 0 ||
+                selectedRegions.includes(region);
+
+            product.style.display =
+                matchesRoast && matchesRegion ? "" : "none";
         });
+    }
 
+    filters.forEach(filter => {
+        filter.addEventListener("change", handleFilterChange);
     });
 
+    handleFilterChange();
 }
 
+// TRANSICIONES DE SCROLL
 
+const elementos = document.querySelectorAll('.transicionScroll');
+
+const observador = new IntersectionObserver((entradas) => {
+    entradas.forEach((entrada) => {
+        if (entrada.isIntersecting) {
+            entrada.target.classList.add('visible');
+        } else {
+            entrada.target.classList.remove('visible');
+        }
+    });
+}, {
+    threshold: 0.15
+});
+
+elementos.forEach((elemento) => {
+    observador.observe(elemento);
+});

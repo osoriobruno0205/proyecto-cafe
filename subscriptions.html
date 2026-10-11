@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +12,7 @@
     <meta property="og:url" content="https://metatags.io/">
     <meta property="og:title" content="Archive Coffee — The most delicious taste">
     <meta property="og:description" content="Descubre nuestra tienda online de café y disfruta de granos seleccionados, aromas únicos y sabores excepcionales. Tu café favorito, a un clic de distancia.">
-    <meta property="og:image" content="https://metatags.io/images/meta-tags.png">
+    <meta property="og:image" content="./media/logo.webp">
 
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://metatags.io/">
@@ -43,19 +42,19 @@
 </head>
 <body>
     <header class="header">
-        <a href="index.html" class="logo">ARCHIVE COFFEE</a>
+        <a href="index.html" class="logo" title="Archive Coffee - Home">ARCHIVE COFFEE</a>
 
         <nav class="no-mobile" aria-label="Navegación principal">
             <ul class="options">
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="shop.html" class="active">SHOP</a></li>
-                <li><a href="subscriptions.html">SUBSCRIPTIONS</a></li>
-                <li><a href="#">LOCATIONS</a></li>
-                <li><a href="#">ABOUT</a></li>
+                <li><a href="index.html" title="Home">HOME</a></li>
+                <li><a href="shop.html" class="active" title="Shop coffee">SHOP</a></li>
+                <li><a href="subscriptions.html" title="Coffee subscriptions">SUBSCRIPTIONS</a></li>
+                <li><a href="#" title="Our locations">LOCATIONS</a></li>
+                <li><a href="#" title="About Archive Coffee">ABOUT</a></li>
             </ul>
         </nav>
 
-        <a href="checkout.html" class="boton">ORDER NOW</a>
+        <a href="checkout.html" class="boton" title="Place an order">ORDER NOW</a>
 
         <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">
             <span></span>
@@ -65,7 +64,7 @@
     </header>
 
     <main>
-        <section class="subscriptions-hero">
+        <section class="subscriptions-hero transicionScroll">
             <img src="media/baritasfondo.webp" alt="Archive Coffee subscription" class="subscriptions-hero__image">
             <div class="subscriptions-hero__overlay"></div>
 
@@ -81,9 +80,9 @@
             </div>
         </section>
 
-        <section class="subscriptions">
+        <section class="subscriptions transicionScroll">
             <div class="subscriptions__plans">
-                <article class="subscription-card">
+                <article class="subscription-card transicionScroll">
                     <div class="subscription-card__header">
                         <div>
                             <h2 class="subscription-card__name">ENTRY</h2>
@@ -102,10 +101,10 @@
                         <li class="subscription-card__feature">Standard Shipping included</li>
                     </ul>
 
-                    <a href="checkout.html" class="subscription-card__button">SELECT TIER</a>
+                    <a href="checkout.html" class="subscription-card__button" title="Select the Entry subscription plan">SELECT TIER</a>
                 </article>
 
-                <article class="subscription-card subscription-card--featured">
+                <article class="subscription-card subscription-card--featured transicionScroll">
                     <span class="subscription-card__badge">MOST EFFICIENT</span>
 
                     <div class="subscription-card__header">
@@ -127,10 +126,10 @@
                         <li class="subscription-card__feature">10% discount on all shop items</li>
                     </ul>
 
-                    <a href="checkout.html" class="subscription-card__button">SELECT TIER</a>
+                    <a href="checkout.html" class="subscription-card__button" title="Select the Standard subscription plan">SELECT TIER</a>
                 </article>
 
-                <article class="subscription-card">
+                <article class="subscription-card transicionScroll">
                     <div class="subscription-card__header">
                         <div>
                             <h2 class="subscription-card__name">MASTER</h2>
@@ -150,26 +149,26 @@
                         <li class="subscription-card__feature">Personalized brewing consultation</li>
                     </ul>
 
-                    <a href="checkout.html" class="subscription-card__button">SELECT TIER</a>
+                    <a href="checkout.html" class="subscription-card__button" title="Select the Master subscription plan">SELECT TIER</a>
                 </article>
             </div>
         </section>
 
-        <section class="validation">
+        <section class="validation transicionScroll">
             <div class="validation__header">
                 <h2 class="validation__title">STRUCTURAL VALIDATION</h2>
                 <p class="validation__subtitle">COMMUNITY FEEDBACK</p>
             </div>
 
             <div class="validation__testimonials">
-                <article class="testimonial">
+                <article class="testimonial transicionScroll">
                     <p class="testimonial__quote">"The precision of their roasting schedule is unmatched. Every delivery arrives exactly 48 hours after the roast date, maintaining the integrity of the beans."</p>
 
                     <div class="testimonial__author">
                         <div class="testimonial__photo">
                             <picture>
                                 <source srcset="media/testimoniodos.webp" type="image/webp">
-                                <img src="media/testimoniodos.jpg" alt="David Chase">
+                                <img src="media/testimoniodos.jpg" alt="David Chase" loading="lazy">
                             </picture>
                         </div>
 
@@ -180,18 +179,13 @@
                     </div>
                 </article>
 
-                <article class="testimonial">
-                    <p class="testimonial__quote">
-                        "Archive Coffee has refined my morning workflow.
-                        The Standard tier provides the perfect balance of
-                        variety and consistency for our studio."
-                    </p>
-
+                <article class="testimonial transicionScroll">
+                    <p class="testimonial__quote">"Archive Coffee has refined my morning workflow. The Standard tier provides the perfect balance of variety and consistency for our studio."</p>
                     <div class="testimonial__author">
                         <div class="testimonial__photo">
                             <picture>
                                 <source srcset="media/testimoniouno.webp" type="image/webp">
-                                <img src="media/testimoniouno.jpg" alt="Elena Vost">
+                                <img src="media/testimoniouno.jpg" alt="Elena Vost" loading="lazy">
                             </picture>
                         </div>
 
@@ -204,7 +198,7 @@
             </div>
         </section>
 
-        <section class="technical">
+        <section class="technical transicionScroll">
             <div class="technical__header">
                 <h2 class="technical__title">TECHNICAL SPECIFICATIONS</h2>
                 <p class="technical__subtitle">FREQUENTLY ASKED QUESTIONS</p>
@@ -218,9 +212,7 @@
                     </summary>
 
                     <div class="technical__answer">
-                        <p>
-                            Yes. Your roast profile can be modified
-                            according to the available subscription options.
+                        <p>Yes. Your roast profile can be modified according to the available subscription options.
                         </p>
                     </div>
                 </details>
@@ -232,11 +224,7 @@
                     </summary>
 
                     <div class="technical__answer">
-                        <p>
-                            International delivery availability depends
-                            on the destination and current distribution
-                            protocols.
-                        </p>
+                        <p>International delivery availability depends on the destination and current distribution protocols. </p>
                     </div>
                 </details>
 
@@ -253,41 +241,41 @@
             </div>
         </section>
 
-        <section class="subscription-cta">
+        <section class="subscription-cta transicionScroll">
             <div class="subscription-cta__content">
                 <h2 class="subscription-cta__title">READY TO INITIATE YOUR SEQUENCE?</h2>
-                <a href="checkout.html" class="subscription-cta__button">START SUBSCRIPTION</a>
+                <a href="checkout.html" class="subscription-cta__button" title="Start your coffee subscription">START SUBSCRIPTION</a>
             </div>
         </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer transicionScroll">
         <div class="footer__content">
             <div class="footer__brand">
-                <a href="index.html" class="footer__logo">ARCHIVE COFFEE</a>
+                <a href="index.html" class="footer__logo" title="Archive Coffee - Home">ARCHIVE COFFEE</a>
                 <p class="footer__description"> Dedicated to the architectural precision of coffee roasting and modern brewing rituals.</p>
             </div>
             <div class="footer__column">
                 <h3 class="footer__heading">RESOURCES</h3>
                 <ul class="footer__links">
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#" title="Privacy policy">Privacy Policy</a></li>
+                    <li><a href="#" title="Terms of service">Terms of Service</a></li>
                 </ul>
             </div>
 
             <div class="footer__column">
                 <h3 class="footer__heading">LOGISTICS</h3>
                 <ul class="footer__links">
-                    <li><a href="#">Shipping &amp; Returns</a></li>
-                    <li><a href="#">Wholesale</a></li>
+                    <li><a href="#" title="Shipping and returns policy">Shipping &amp; Returns</a></li>
+                    <li><a href="#" title="Wholesale coffee">Wholesale</a></li>
                 </ul>
             </div>
 
             <div class="footer__column">
                 <h3 class="footer__heading">COMPANY</h3>
                 <ul class="footer__links">
-                    <li><a href="#">Careers</a></li>
-                    <li><a href="index.html#about">About Us</a></li>
+                    <li><a href="#" title="Careers at Archive Coffee">Careers</a></li>
+                    <li><a href="index.html#about" title="About Archive Coffee">About Us</a></li>
                 </ul>
             </div>
         </div>

@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shop | Archive Coffee</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet">
@@ -28,7 +27,7 @@
     <meta property="og:url" content="https://metatags.io/">
     <meta property="og:title" content="Archive Coffee — The most delicious taste">
     <meta property="og:description" content="Descubre nuestra tienda online de café y disfruta de granos seleccionados, aromas únicos y sabores excepcionales. Tu café favorito, a un clic de distancia.">
-    <meta property="og:image" content="https://metatags.io/images/meta-tags.png">
+    <meta property="og:image" content="./media/logo.webp">
 
     <!-- X (Twitter) -->
     <meta property="twitter:card" content="summary_large_image">
@@ -40,17 +39,17 @@
 </head>
 <body>
     <header class="header">
-        <a href="index.html" class="logo">ARCHIVE COFFEE</a>
+        <a href="index.html" class="logo" title="Archive Coffee - Home">ARCHIVE COFFEE</a>
         <nav class="no-mobile" aria-label="Navegación principal">
             <ul class="options">
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="shop.html" class="active">SHOP</a></li>
-                <li><a href="subscriptions.html">SUBSCRIPTIONS</a></li>
-                <li><a href="#">LOCATIONS</a></li>
-                <li><a href="#">ABOUT</a></li>
+                <li><a href="index.html" title="Home">HOME</a></li>
+                <li><a href="shop.html" class="active" title="Shop coffee">SHOP</a></li>
+                <li><a href="subscriptions.html" title="Coffee subscriptions">SUBSCRIPTIONS</a></li>
+                <li><a href="#" title="Our locations">LOCATIONS</a></li>
+                <li><a href="#" title="About Archive Coffee">ABOUT</a></li>
             </ul>
         </nav>
-        <a href="checkout.html" class="boton">ORDER NOW</a>
+        <a href="checkout.html" class="boton" title="Place an order">ORDER NOW</a>
         <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">
             <span></span>
             <span></span>
@@ -59,7 +58,7 @@
     </header>
 
     <main class="shop-page">
-        <section class="recommendations" aria-label="Recommended products">
+        <section class="recommendations transicionScroll" aria-label="Recommended products">
             <div class="recommendations__header">
                 <div class="recommendations__heading">
                     <span class="recommendations__label">CURATED SELECTION</span>
@@ -71,7 +70,7 @@
                 <button type="button" class="recommendations__arrow recommendations__arrow--prev" aria-label="Previous recommendation">←</button>
                 <div class="recommendations__viewport">
                     <div class="recommendations__track">
-                        <section class="recommendation-card is-active">
+                        <section class="recommendation-card is-active transicionScroll">
                             <div class="recommendation-card__image">
                                 <span class="recommendation-card__tag">ETHIOPIA</span>
                                 <picture>
@@ -90,16 +89,16 @@
                                     A bright Ethiopian selection with floral
                                     character and a clean, honeyed finish.
                                 </p>
-                                <a href="checkout.html" class="recommendation-card__button">SHOP NOW</a>
+                                <a href="checkout.html" class="recommendation-card__button" title="Shop Quill Sidamo Highland coffee">SHOP NOW</a>
                             </div>
                         </section>
 
-                        <section class="recommendation-card">
+                        <section class="recommendation-card transicionScroll">
                             <div class="recommendation-card__image">
                                 <span class="recommendation-card__tag">COLOMBIA / HUILA</span>
                                 <picture>
                                     <source srcset="media/carrouselfotodos.webp" type="image/webp">
-                                    <img src="media/carrouselfotodos.webp" alt="Huila Reserve Dark coffee">
+                                    <img src="media/carrouselfotodos.webp" alt="Huila Reserve Dark coffee" loading="lazy">
                                 </picture>
                             </div>
                             <div class="recommendation-card__content">
@@ -113,16 +112,16 @@
                                     A structured Colombian roast with deep
                                     chocolate notes and a rich finish.
                                 </p>
-                                <a href="checkout.html" class="recommendation-card__button">SHOP NOW</a>
+                                <a href="checkout.html" class="recommendation-card__button" title="Shop Huila Reserve Dark coffee">SHOP NOW</a>
                             </div>
                         </section>
 
-                        <section class="recommendation-card">
+                        <section class="recommendation-card transicionScroll">
                             <div class="recommendation-card__image">
                                 <span class="recommendation-card__tag">BREWING GEAR</span>
                                 <picture>
                                     <source srcset="media/carrouselfototres.webp" type="image/webp">
-                                    <img src="media/carrouselfototres.webp" alt="Hario V60 Ceramic Onyx">
+                                    <img src="media/carrouselfototres.webp" alt="Hario V60 Ceramic Onyx" loading="lazy">
                                 </picture>
                             </div>
                             <div class="recommendation-card__content">
@@ -133,16 +132,16 @@
                                 <h2 class="recommendation-card__name">Hario V60 Ceramic - Onyx</h2>
                                 <p class="recommendation-card__notes">Spiral Ribbing · Ceramic · Pour Over</p>
                                 <p class="recommendation-card__description">Precise extraction with spiral ribbing designed for controlled pour-over brewing.</p>
-                                <a href="checkout.html" class="recommendation-card__button">SHOP NOW</a>
+                                <a href="checkout.html" class="recommendation-card__button" title="Shop Hario V60 Ceramic Onyx">SHOP NOW</a>
                             </div>
                         </section>
 
-                        <section class="recommendation-card">
+                        <section class="recommendation-card transicionScroll">
                             <div class="recommendation-card__image">
                                 <span class="recommendation-card__tag">PRECISION TOOLS</span>
                                 <picture>
                                     <source srcset="media/carrouselfotocuatro.webp" type="image/webp">
-                                    <img src="media/carrouselfotocuatro.webp" alt="Archive Scale 1.2">
+                                    <img src="media/carrouselfotocuatro.webp" alt="Archive Scale 1.2" loading="lazy">
                                 </picture>
                             </div>
                             <div class="recommendation-card__content">
@@ -156,7 +155,7 @@
                                     Precision weighing with an integrated
                                     flow-rate timer for repeatable brewing.
                                 </p>
-                                <a href="checkout.html" class="recommendation-card__button">SHOP NOW</a>
+                                <a href="checkout.html" class="recommendation-card__button" title="Shop Archive Scale 1.2">SHOP NOW</a>
                             </div>
                         </section>
                     </div>
@@ -172,7 +171,7 @@
             </div>
         </section>
 
-        <section class="shop-intro">
+        <section class="shop-intro transicionScroll">
             <div class="shop-intro__content">
                 <h2 class="shop-intro__title">INVENTORY CONTROL</h2>
                 <p class="shop-intro__description">
@@ -182,7 +181,7 @@
             </div>
         </section>
 
-        <section class="inventory">
+        <section class="inventory transicionScroll">
             <div class="inventory__layout">
                 <aside class="inventory__sidebar">
                     <form class="inventory-filters">
@@ -223,23 +222,23 @@
                         </fieldset>
                     </form>
 
-                    <section class="inventory-subscription">
+                    <section class="inventory-subscription transicionScroll">
                         <span class="inventory-subscription__label">CURATED PICKS</span>
                         <h2 class="inventory-subscription__title">ARCHIVE SUBSCRIPTION</h2>
                         <p class="inventory-subscription__description">
                             Rotating seasonal selections delivered to your studio monthly.
                         </p>
-                        <a href="subscriptions.html" class="inventory-subscription__button">ENROLL NOW</a>
-                    </article>
+                        <a href="subscriptions.html" class="inventory-subscription__button" title="Enroll in Archive Coffee subscriptions">ENROLL NOW</a>
+                    </section>
                 </aside>
 
                 <div class="inventory__products">
-                    <section class="product-card" data-roast="light" data-region="ethiopia">
+                    <section class="product-card transicionScroll" data-roast="light" data-region="ethiopia">
                         <div class="product-card__image">
                             <span class="product-card__tag">ETHIOPIA</span>
                             <picture>
                                 <source srcset="media/cafeimagenuno.webp" type="image/webp">
-                                <img src="media/cafeimagenuno.webp" alt="Quill Sidamo Highland coffee">
+                                <img src="media/cafeimagenuno.webp" alt="Quill Sidamo Highland coffee" loading="lazy">
                             </picture>
                         </div>
                         <div class="product-card__content">
@@ -249,12 +248,12 @@
                         </div>
                     </section>
 
-                    <section class="product-card" data-category="equipment">
+                    <section class="product-card transicionScroll" data-category="equipment">
                         <div class="product-card__image">
                             <span class="product-card__tag">BREWING GEAR</span>
                             <picture>
                                 <source srcset="media/harioimagen.webp" type="image/webp">
-                                <img src="media/harioimagen.webp" alt="Hario V60 Ceramic Onyx">
+                                <img src="media/harioimagen.webp" alt="Hario V60 Ceramic Onyx" loading="lazy">
                             </picture>
                         </div>
                         <div class="product-card__content">
@@ -264,10 +263,10 @@
                         </div>
                     </section>
 
-                    <section class="product-card" data-category="equipment">
+                    <section class="product-card transicionScroll" data-category="equipment">
                         <div class="product-card__image">
                             <span class="product-card__tag">PRECISION TOOLS</span>
-                                <img src="./media/archiscale.webp" alt="Archive Scale 1.2">
+                                <img src="./media/archiscale.webp" alt="Archive Scale 1.2" loading="lazy">
                         </div>
                         <div class="product-card__content">
                             <span class="product-card__price">$145.00</span>
@@ -276,12 +275,12 @@
                         </div>
                     </section>
 
-                    <section class="product-card" data-roast="dark" data-region="colombia">
+                    <section class="product-card transicionScroll" data-roast="dark" data-region="colombia">
                         <div class="product-card__image">
                             <span class="product-card__tag">COLOMBIA / HUILA</span>
                             <picture>
                                 <source srcset="media/cafecoluno.webp" type="image/webp">
-                                <img src="media/cafecoluno.webp" alt="Huila Reserve Dark coffee">
+                                <img src="media/cafecoluno.webp" alt="Huila Reserve Dark coffee" loading="lazy">
                             </picture>
                         </div>
                         <div class="product-card__content">
@@ -291,12 +290,12 @@
                         </div>
                     </section>
 
-                    <section class="product-card" data-category="equipment">
+                    <section class="product-card transicionScroll" data-category="equipment">
                         <div class="product-card__image">
                             <span class="product-card__tag">EQUIPMENT</span>
                             <picture>
                                 <source srcset="media/imagenkettle.webp" type="image/webp">
-                                <img src="media/imagenkettle.webp" alt="Gooseneck Flow Kettle">
+                                <img src="media/imagenkettle.webp" alt="Gooseneck Flow Kettle" loading="lazy">
                             </picture>
                         </div>
                         <div class="product-card__content">
@@ -306,12 +305,12 @@
                         </div>
                     </section>
 
-                    <section class="product-card" data-category="glassware">
+                    <section class="product-card transicionScroll" data-category="glassware">
                         <div class="product-card__image">
                             <span class="product-card__tag">GLASSWARE</span>
                             <picture>
                                 <source srcset="media/archiglass.webp" type="image/webp">
-                                <img src="media/archiglass.webp" alt="Archive Glass Tumbler Set">
+                                <img src="media/archiglass.webp" alt="Archive Glass Tumbler Set" loading="lazy">
                             </picture>
                         </div>
                         <div class="product-card__content">
@@ -321,12 +320,12 @@
                         </div>
                     </section>
 
-                    <section class="product-card" data-roast="medium" data-region="kenya">
+                    <section class="product-card transicionScroll" data-roast="medium" data-region="kenya">
                         <div class="product-card__image">
                             <span class="product-card__tag">KENYA</span>
                             <picture>
                                 <source srcset="media/cafekenyauno.webp" type="image/webp">
-                                <img src="media/cafekenyauno.webp" alt="Kenya Highlands coffee">
+                                <img src="media/cafekenyauno.webp" alt="Kenya Highlands coffee" loading="lazy">
                             </picture>
                         </div>
                         <div class="product-card__content">
@@ -336,12 +335,12 @@
                         </div>
                     </section>
 
-                    <section class="product-card" data-roast="dark" data-region="indonesia">
+                    <section class="product-card transicionScroll" data-roast="dark" data-region="indonesia">
                         <div class="product-card__image">
                             <span class="product-card__tag">INDONESIA</span>
                             <picture>
                                 <source srcset="media/cafeindonesiauno.webp" type="image/webp">
-                                <img src="media/cafeindonesiauno.webp" alt="Sumatra Estate coffee">
+                                <img src="media/cafeindonesiauno.webp" alt="Sumatra Estate coffee" loading="lazy">
                             </picture>
                         </div>
                         <div class="product-card__content">
@@ -351,12 +350,12 @@
                         </div>
                     </section>
 
-                    <section class="product-card" data-roast="dark" data-region="kenya">
+                    <section class="product-card transicionScroll" data-roast="dark" data-region="kenya">
                         <div class="product-card__image">
                             <span class="product-card__tag">KENYA</span>
                             <picture>
                                 <source srcset="media/cafekenyados.webp" type="image/webp">
-                                <img src="media/cafekenyados.webp" alt="Kenya Dark Estate coffee">
+                                <img src="media/cafekenyados.webp" alt="Kenya Dark Estate coffee" loading="lazy">
                             </picture>
                         </div>
                         <div class="product-card__content">
@@ -366,12 +365,12 @@
                         </div>
                     </section>
 
-                    <section class="product-card" data-roast="medium" data-region="ethiopia">
+                    <section class="product-card transicionScroll" data-roast="medium" data-region="ethiopia">
                         <div class="product-card__image">
                             <span class="product-card__tag">ETHIOPIA</span>
                             <picture>
                                 <source srcset="media/cafeeti.webp" type="image/webp">
-                                <img src="media/cafeeti.webp" alt="Ethiopia Natural coffee">
+                                <img src="media/cafeeti.webp" alt="Ethiopia Natural coffee" loading="lazy">
                             </picture>
                         </div>
                         <div class="product-card__content">
@@ -381,12 +380,12 @@
                         </div>
                     </section>
 
-                    <section class="product-card" data-roast="medium" data-region="colombia">
+                    <section class="product-card transicionScroll" data-roast="medium" data-region="colombia">
                         <div class="product-card__image">
                             <span class="product-card__tag">COLOMBIA</span>
                             <picture>
                                 <source srcset="media/cafecoltres.webp" type="image/webp">
-                                <img src="media/cafecoltres.webp" alt="Colombia El Dorado coffee">
+                                <img src="media/cafecoltres.webp" alt="Colombia El Dorado coffee" loading="lazy">
                             </picture>
                         </div>
                         <div class="product-card__content">
@@ -396,12 +395,12 @@
                         </div>
                     </section>
 
-                    <section class="product-card" data-roast="light" data-region="kenya">
+                    <section class="product-card transicionScroll" data-roast="light" data-region="kenya">
                         <div class="product-card__image">
                             <span class="product-card__tag">KENYA</span>
                             <picture>
                                 <source srcset="media/cafekenyacuatro.webp" type="image/webp">
-                                <img src="media/cafekenyacuatro.webp" alt="Kenya Kirinyaga coffee">
+                                <img src="media/cafekenyacuatro.webp" alt="Kenya Kirinyaga coffee" loading="lazy">
                             </picture>
                         </div>
                         <div class="product-card__content">
@@ -411,12 +410,12 @@
                         </div>
                     </section>
 
-                    <section class="product-card" data-roast="light" data-region="colombia">
+                    <section class="product-card transicionScroll" data-roast="light" data-region="colombia">
                         <div class="product-card__image">
                             <span class="product-card__tag">COLOMBIA</span>
                             <picture>
                                 <source srcset="media/cafecolultimo.webp" type="image/webp">
-                                <img src="media/cafecolultimo.webp" alt="Colombia Sierra Light coffee">
+                                <img src="media/cafecolultimo.webp" alt="Colombia Sierra Light coffee" loading="lazy">
                             </picture>
                         </div>
                         <div class="product-card__content">
@@ -426,7 +425,7 @@
                         </div>
                     </section>
 
-                    <div class="inventory__more">
+                    <div class="inventory__more transicionScroll">
                         <button type="button" class="inventory__more-button">SHOW MORE INVENTORY</button>
                     </div>
                 </div>
@@ -434,36 +433,36 @@
         </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer transicionScroll">
         <div class="footer__content">
             <div class="footer__main">
                 <div class="footer__brand">
-                    <a href="index.html" class="footer__logo">ARCHIVE COFFEE</a>
+                    <a href="index.html" class="footer__logo" title="Archive Coffee - Home">ARCHIVE COFFEE</a>
                     <p class="footer__description">Building the architecture of superior coffee since 2024.Precision-focused, quality-driven.</p>
                     <div class="footer__social">
-                        <a href="#" aria-label="Instagram" class="footer__social-link"><i class="ri-instagram-line"></i></a>
-                        <a href="#" aria-label="Email" class="footer__social-link"><i class="ri-mail-line"></i></a>
-                        <a href="#" aria-label="X" class="footer__social-link"><i class="ri-global-line"></i></a>
+                        <a href="#" aria-label="Instagram" class="footer__social-link" title="Visit our Instagram profile"><i class="ri-instagram-line"></i></a>
+                        <a href="#" aria-label="Email" class="footer__social-link" title="Contact us by email"><i class="ri-mail-line"></i></a>
+                        <a href="#" aria-label="X" class="footer__social-link" title="Visit our social media profile"><i class="ri-global-line"></i></a>
                     </div>
                 </div>
 
                 <div class="footer__column">
                     <h2 class="footer__heading">COMPANY</h2>
                     <ul class="footer__links">
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="#">Careers</a></li>
-                        <li><a href="#">Wholesale</a></li>
-                        <li><a href="#">Journal</a></li>
+                        <li><a href="about.html" title="About Archive Coffee">About Us</a></li>
+                        <li><a href="#" title="Careers at Archive Coffee">Careers</a></li>
+                        <li><a href="#" title="Wholesale coffee">Wholesale</a></li>
+                        <li><a href="#" title="Read the Archive Coffee journal">Journal</a></li>
                     </ul>
                 </div>
 
                 <div class="footer__column">
                     <h2 class="footer__heading">SUPPORT</h2>
                     <ul class="footer__links">
-                        <li><a href="#">Shipping &amp; Returns</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
-                        <li><a href="#">Careers</a></li>
+                        <li><a href="#" title="Shipping and returns policy">Shipping &amp; Returns</a></li>
+                        <li><a href="#" title="Privacy policy">Privacy Policy</a></li>
+                        <li><a href="#" title="Terms of service">Terms of Service</a></li>
+                        <li><a href="#" title="Careers at Archive Coffee">Careers</a></li>
                     </ul>
                 </div>
 
@@ -472,8 +471,8 @@
                     <address class="footer__contact-info">
                         <p>124 Architectural Way</p>
                         <p>Portland, OR 97201</p>
-                        <a href="tel:+15035550194">+1 (503) 555-0194</a>
-                        <a href="mailto:studio@archivecoffee.com">studio@archivecoffee.com</a>
+                        <a href="tel:+15035550194" title="Call Archive Coffee">+1 (503) 555-0194</a>
+                        <a href="mailto:studio@archivecoffee.com" title="Email Archive Coffee">studio@archivecoffee.com</a>
                     </address>
                 </div>
 
